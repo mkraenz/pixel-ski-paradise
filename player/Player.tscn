@@ -45,7 +45,14 @@ position = Vector2(0, -2)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_ea2p8")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(-8, -17)
 sprite_frames = SubResource("SpriteFrames_oiaj6")
+autoplay = "default"
 centered = false
+
+[node name="PushPoleTimer" type="Timer" parent="AnimSprite"]
+wait_time = 0.2
+one_shot = true
+
+[connection signal="timeout" from="AnimSprite/PushPoleTimer" to="." method="_on_push_pole_timer_timeout"]
