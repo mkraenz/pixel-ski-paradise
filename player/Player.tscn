@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://dnhulsx17skef"]
+
+[ext_resource type="Script" path="res://player/Player.gd" id="1_calhm"]
+[ext_resource type="Texture2D" uid="uid://day1nx0idglb4" path="res://third-party/kenney-tiny-ski/Tilemap/tilemap-clean.png" id="1_p2tq3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ft522"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x2of2"]
+atlas = ExtResource("1_p2tq3")
+region = Rect2(176, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bd7tm"]
+atlas = ExtResource("1_p2tq3")
+region = Rect2(160, 96, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oiaj6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x2of2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bd7tm")
+}],
+"loop": true,
+"name": &"push_pole",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+z_index = 10
+position = Vector2(8, 8)
+collision_layer = 2
+script = ExtResource("1_calhm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+shape = SubResource("CircleShape2D_ft522")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_oiaj6")
