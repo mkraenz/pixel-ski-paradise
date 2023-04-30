@@ -11,8 +11,8 @@ const acceleration_cooldown := 0.7
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-@onready var anims := $AnimSprite
-@onready var pushPoleAnimTimer := $AnimSprite/PushPoleTimer
+@onready var anims: AnimatedSprite2D = $AnimSprite
+@onready var pushPoleAnimTimer: Timer = $AnimSprite/PushPoleTimer
 
 var acceleration_cooldown_timer := acceleration_cooldown + 1.0 # start with cooldown expired
 var apply_delayed_acceleration = false
@@ -43,6 +43,7 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, HORIZONTAL_SPEED)
 
 	move_and_slide()
+
 
 
 
