@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://b7tgaclu1ngjx"]
+
+[ext_resource type="Texture2D" uid="uid://day1nx0idglb4" path="res://third-party/kenney-tiny-ski/Tilemap/tilemap-clean.png" id="1_65pjt"]
+
+[resource]
+atlas = ExtResource("1_65pjt")
+region = Rect2(144, 16, 16, 16)

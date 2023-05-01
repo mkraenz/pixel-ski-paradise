@@ -14,6 +14,10 @@ config/name="Pixel-ski"
 run/main_scene="res://World.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
 
+[autoload]
+
+Eventbus="*res://global/Eventbus.gd"
+
 [display]
 
 window/size/viewport_width=320
