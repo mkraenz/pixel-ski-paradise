@@ -1,5 +1,7 @@
 extends Label
 
+@onready var eventbus := Eventbus
+
 var time_in_secs := 0.0
 var final_time_in_secs := -1.0
 
@@ -21,4 +23,10 @@ func _on_goal_body_entered(_body) -> void:
 	print("RECEIVED GOAL AREA ENTERED")
 	final_time_in_secs = time_in_secs
 	update_text(final_time_in_secs)
+	set_process(false)
+
+func _ready():
+	eventbus.connect('goal_reached', _on_goal_reached)
+
+func _on_goal_reached():
 	set_process(false)
