@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://crfkid33pyvvx"]
+
+[ext_resource type="Texture2D" uid="uid://cmumn78gxa3wl" path="res://assets/manni.png" id="1_yfyd0"]
+
+[node name="Manni" type="Sprite2D"]
+z_index = 10
+texture = ExtResource("1_yfyd0")
