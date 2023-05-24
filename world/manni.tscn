@@ -1,7 +1,30 @@
-[gd_scene load_steps=2 format=3 uid="uid://crfkid33pyvvx"]
+[gd_scene load_steps=5 format=3 uid="uid://crfkid33pyvvx"]
 
 [ext_resource type="Texture2D" uid="uid://cmumn78gxa3wl" path="res://assets/manni.png" id="1_yfyd0"]
 
-[node name="Manni" type="Sprite2D"]
-z_index = 10
-texture = ExtResource("1_yfyd0")
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4qo0"]
+atlas = ExtResource("1_yfyd0")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nhqbq"]
+atlas = ExtResource("1_yfyd0")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8rgkv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4qo0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nhqbq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Manni" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_8rgkv")
+autoplay = "default"
+frame_progress = 0.0707806
