@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7wa6oithya6r"]
+
+[ext_resource type="Script" path="res://ui/penalty_time.gd" id="1_ciat3"]
+
+[node name="PenaltyTime" type="Label"]
+offset_right = 101.0
+offset_bottom = 26.0
+text = "0 of 8 passed"
+script = ExtResource("1_ciat3")

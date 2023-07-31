@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dw3cc8fwbk21r"]
+
+[ext_resource type="Script" path="res://ui/TotalTime.gd" id="1_jtuja"]
+
+[node name="TotalTime" type="Label"]
+offset_right = 64.0
+offset_bottom = 26.0
+text = "00:00:000"
+script = ExtResource("1_jtuja")

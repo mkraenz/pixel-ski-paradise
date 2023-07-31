@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://n8e4ahv86bnj"]
+
+[ext_resource type="Script" path="res://ui/hud/HUD.gd" id="1_s6my7"]
+[ext_resource type="PackedScene" uid="uid://dw3cc8fwbk21r" path="res://ui/total_time.tscn" id="2_tjk3a"]
+[ext_resource type="PackedScene" uid="uid://b7wa6oithya6r" path="res://ui/penalty_time.tscn" id="3_tjm7n"]
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s6my7")
+
+[node name="TotalTime" parent="." instance=ExtResource("2_tjk3a")]
+layout_mode = 0
+
+[node name="PenaltyTime" parent="." instance=ExtResource("3_tjm7n")]
+layout_mode = 0
+offset_top = 19.0
+offset_right = 104.0
+offset_bottom = 45.0
