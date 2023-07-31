@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bi08raw4e5yar"]
+[gd_scene load_steps=17 format=3 uid="uid://bi08raw4e5yar"]
 
 [ext_resource type="Script" path="res://World.gd" id="1_dmawl"]
 [ext_resource type="Texture2D" uid="uid://day1nx0idglb4" path="res://third-party/kenney-tiny-ski/Tilemap/tilemap-clean.png" id="2_rpq6t"]
@@ -9,6 +9,7 @@
 [ext_resource type="FontFile" uid="uid://jjhy185jdb84" path="res://third-party/press_start_2p/PressStart2P-Regular.ttf" id="5_6ua4y"]
 [ext_resource type="Script" path="res://ui/hud/PenaltyTIme.gd" id="6_ap5du"]
 [ext_resource type="Script" path="res://ui/end/End.gd" id="6_nqdwy"]
+[ext_resource type="AudioStream" uid="uid://dlfg5ly6evfcw" path="res://third-party/opengameart/applause.mp3" id="7_03db5"]
 [ext_resource type="PackedScene" uid="uid://b1yemod5c4r5o" path="res://world/goal.tscn" id="7_db24a"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_exiew"]
@@ -647,6 +648,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.768627)
+
+[node name="Audio" type="AudioStreamPlayer2D" parent="UI/End"]
+stream = ExtResource("7_03db5")
 
 [node name="HUD" type="Control" parent="UI"]
 layout_mode = 3
